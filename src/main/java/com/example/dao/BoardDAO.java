@@ -131,7 +131,7 @@ public class BoardDAO {
 			stmt.setInt(1, sid);
 			rs = stmt.executeQuery();
 			if(rs.next()) {
-				filename = rs.getString("photo");
+				filename = rs.getString("fileName");
 			}
 			rs.close();
 		} catch (Exception e) {
