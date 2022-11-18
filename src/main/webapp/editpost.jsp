@@ -7,8 +7,16 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	BoardDAO boardDAO = new BoardDAO();
+
 	FileUpload upload = new FileUpload();
 	BoardVO u = upload.uploadPhoto(request);
-	int i=boardDAO.updateBoard(u);
-	response.sendRedirect("posts.jsp");
+
+	int i = boardDAO.updateBoard(u);
+	String msg = "데이터 수정 성공 !";
+	if(i == 0) msg = "[에러] 데이터 수정 실패 !";
 %>
+
+<script>
+	alert('<%=msg%>');
+	location.href='posts.jsp'
+</script>

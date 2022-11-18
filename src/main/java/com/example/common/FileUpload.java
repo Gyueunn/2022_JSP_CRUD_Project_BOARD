@@ -33,9 +33,9 @@ public class FileUpload {
             one.setTitle(multipartRequest.getParameter("title"));
             one.setWriter(multipartRequest.getParameter("writer"));
             one.setContent(multipartRequest.getParameter("content"));
-            one.setFileName(multipartRequest.getParameter("filename"));
+            //one.setFileName(multipartRequest.getParameter("fileName"));
 
-            if(sid!=null && sid.equals("")){
+            if(sid!=null && !sid.equals("")){
                 BoardDAO dao = new BoardDAO();
                 String oldfilename = dao.getPhotoFilename(Integer.parseInt(sid));
 

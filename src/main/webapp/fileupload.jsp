@@ -12,6 +12,7 @@
 <%@ page import="com.oreilly.servlet.*" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 
+<% request.setCharacterEncoding("utf-8"); %>
 
 <html>
 <head>

@@ -3,6 +3,7 @@
 <%@page import="com.example.dao.BoardDAO, com.example.bean.BoardVO"%>
 <%@ page import="com.example.common.FileUpload" %>
 <%
+	request.setCharacterEncoding("utf-8");
 	String sid = request.getParameter("id");
 	if (sid != ""){  
 		int id = Integer.parseInt(sid);

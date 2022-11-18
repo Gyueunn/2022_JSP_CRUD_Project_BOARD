@@ -9,7 +9,7 @@
 <body>
 
 <h1>Add New Post</h1>
-<form action="addpost.jsp" method="post" enctype="multipart/form-data">
+<form accept-charset="UTF-8" action="addpost.jsp" method="post" enctype="multipart/form-data">
 <table>
 <tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
 <tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
