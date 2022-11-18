@@ -99,7 +99,6 @@ public class BoardDAO {
 	
 	public List<BoardVO> getBoardList(){
 		List<BoardVO> list = new ArrayList<BoardVO>();
-		System.out.println("===> JDBC로 getBoardList() 기능 처리");
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_LIST);
