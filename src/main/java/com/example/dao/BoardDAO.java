@@ -22,7 +22,6 @@ public class BoardDAO {
 	private final String BOARD_LIST = "select * from BOARD order by seq desc";
 
 	public int insertBoard(BoardVO vo) {
-		System.out.println("===> JDBC로 insertBoard() 기능 처리");
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_INSERT);
@@ -41,7 +40,6 @@ public class BoardDAO {
 
 	// 글 삭제
 	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> JDBC로 deleteBoard() 기능 처리");
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_DELETE);
@@ -52,7 +50,6 @@ public class BoardDAO {
 		}
 	}
 	public int updateBoard(BoardVO vo) {
-		System.out.println("===> JDBC로 updateBoard() 기능 처리");
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_UPDATE);
@@ -75,7 +72,6 @@ public class BoardDAO {
 	
 	public BoardVO getBoard(int seq) {
 		BoardVO one = new BoardVO();
-		System.out.println("===> JDBC로 getBoard() 기능 처리");
 		try {
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(BOARD_GET);
@@ -136,7 +132,6 @@ public class BoardDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("==> JDBC로 getPhotoFilename() 기능 처리");
 		return filename;
 	}
 }
